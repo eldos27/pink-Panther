@@ -1,0 +1,65 @@
+{
+  "Products": [
+    {
+      "title": "Сабзиро",
+      "describtion": "ледяной Ниндзя",
+      "image": "https://lh3.googleusercontent.com/proxy/Uoljp-4zrI9nLpz_Hf6HGGABT3IihZo8UjaHA3aOeZFhlwUPPIolztrSDRccXB6Ggcwhf9-uXLT13CncL3iC8L2bwF_v0z_l1mBw5ROIlmMPEL513AE7ZXgQGvTv7CdA4LRgQQ",
+      "type": "Боец",
+      "price": "15000",
+      "likes": [],
+      "comments": [
+        {
+          "email": "google@gmail.com",
+          "comment": "ghsjflksd",
+          "date": "2021-08-25T06:15:25.816Z"
+        }
+      ],
+      "animation": "https://lh3.googleusercontent.com/proxy/Uoljp-4zrI9nLpz_Hf6HGGABT3IihZo8UjaHA3aOeZFhlwUPPIolztrSDRccXB6Ggcwhf9-uXLT13CncL3iC8L2bwF_v0z_l1mBw5ROIlmMPEL513AE7ZXgQGvTv7CdA4LRgQQ",
+      "id": 1
+    },
+    {
+      "title": "СКорпион",
+      "describtion": "Огненный Ниндзя",
+      "image": "https://wikiwarriors.org/images/b/ba/%D0%A1%D0%BA%D0%BE%D1%80%D0%BF%D0%B8%D0%BE%D0%BD.jpg",
+      "type": "Боец",
+      "price": "15500",
+      "likes": [],
+      "comments": [],
+      "animation": "https://wikiwarriors.org/images/b/ba/%D0%A1%D0%BA%D0%BE%D1%80%D0%BF%D0%B8%D0%BE%D0%BD.jpg",
+      "id": 2
+    },
+    {
+      "title": "Китана",
+      "describtion": "Пикабу",
+      "image": "https://cs5.pikabu.ru/post_img/big/2015/12/09/10/1449683300151323174.jpg",
+      "type": "Боец",
+      "price": "30000",
+      "likes": [],
+      "comments": [],
+      "animation": "https://cs5.pikabu.ru/post_img/big/2015/12/09/10/1449683300151323174.jpg",
+      "id": 3
+    },
+    {
+      "title": "Нуб Сайбот",
+      "describtion": "Бог теней",
+      "image": "https://cdn.gamestatic.net/files/editor_uploads/Rins/gta/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%D0%9F%D0%B0%D0%BF%D0%BA%D0%B0%2057/mk222.jpg",
+      "type": "Маг",
+      "price": "25000",
+      "likes": [],
+      "comments": [],
+      "animation": "https://cdn.gamestatic.net/files/editor_uploads/Rins/gta/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%D0%9F%D0%B0%D0%BF%D0%BA%D0%B0%2057/mk222.jpg",
+      "id": 4
+    },
+    {
+      "title": "Лю Кан",
+      "describtion": "Воин Дракона",
+      "image": "https://www.soyuz.ru/public/uploads/files/3/7395989/201911180810072a2de885c2.jpg",
+      "type": "Маг",
+      "price": "32000",
+      "likes": [],
+      "comments": [],
+      "animation": "https://www.soyuz.ru/public/uploads/files/3/7395989/201911180810072a2de885c2.jpg",
+      "id": 5
+    }
+  ]
+}
