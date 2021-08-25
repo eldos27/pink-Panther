@@ -136,7 +136,7 @@ const ProductList = () => {
               <ProductCard key={item.id} item={item} />
             ))}
           </Grid>
-          <div style={{ marginLeft: '280px' }}>
+          <div style={{ marginLeft: '25px' }}>
             <Pagination style={{ textColor: "white", margin: '10px auto !important' }} count={pages} color="primary" page={+page} onChange={handlePage} />
           </div>
         </Container>
