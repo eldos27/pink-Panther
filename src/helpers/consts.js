@@ -1,4 +1,4 @@
-export const JSON_API_PRODUCTS = 'https://pink-panthers.herokuapp.com/api'
+export const JSON_API_PRODUCTS = 'https://pink-panthers.herokuapp.com/api/products'
 export const AUTH_API_REG = 'https://intense-retreat-64750.herokuapp.com/auth/registration'
 export const AUTH_API_LOGI = "https://intense-retreat-64750.herokuapp.com/auth/login"
 
