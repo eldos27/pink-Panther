@@ -2,6 +2,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useProducts } from '../../contexts/ProductContext';
 import Song from '../../Song/Song';
@@ -26,10 +27,18 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Song />
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/productlist" >Catalog</Nav.Link>
-              <Nav.Link href="/cart">Busket</Nav.Link>
-              <Nav.Link href="/fav">Favorite</Nav.Link>
+              <Link to='/'>
+                <Nav.Link href='/' >Home</Nav.Link>
+              </Link>
+              <Link to='/productlist'>
+                <Nav.Link href='/productlist' >Catalog</Nav.Link>
+              </Link>
+              <Link to='/cart'>
+                <Nav.Link href="/cart">Busket</Nav.Link>
+              </Link>
+              <Link to='/fav'>
+                <Nav.Link href="/fav">Favorite</Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
 
