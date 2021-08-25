@@ -7,7 +7,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useAuth } from '../../contexts/AuthContext';
 import CommentIcon from '@material-ui/icons/Comment';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
-
+import Flip from 'react-reveal/Flip';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -126,70 +126,72 @@ const ProductCard = ({ item }) => {
 
   return (
     <Grid style={{ backgroundColor: `trasparent` }} item key={item.id} xs={12} sm={6} md={4}>
-      <Card style={{ backgroundColor: `rgba(85, 130, 159, 0.4)` }} className={classes.card}>
-        <CardMedia
-          onClick={() => history.push(`/details/${item.id}`)}
-          className={classes.cardMedia}
-          image={item.image}
-          title="Image Title"
-        />
-        <CardContent style={{ backgroundColor: `trasparent`, backgroundSize: "cover", backgroundPosition: "top" }} className={classes.cardContent}>
-          <Typography style={{ color: '#cffbfb' }} variant="h4" gutterBottom>
-            {item.title}
-          </Typography>
-          <Typography style={{ color: '#8fd0ca' }} variant="h5" >
-            {item.type}
-          </Typography>
-          <Typography style={{ color: '#e7fbfc' }} variant="h6" gutterBottom>
-            {item.price}$
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button onClick={() => history.push(`/details/${item.id}`)} size="small" >
-            View
-          </Button>
-          {user && user.email === 'isakov@gmail.com' ? <><Button onClick={() => history.push(`/editproduct/${item.id}`)} size="small" >
-            Edit
-          </Button>
+      <Flip>
+        <Card style={{ backgroundColor: `rgba(85, 130, 159, 0.4)` }} className={classes.card}>
+          <CardMedia
+            onClick={() => history.push(`/details/${item.id}`)}
+            className={classes.cardMedia}
+            image={item.image}
+            title="Image Title"
+          />
+          <CardContent style={{ backgroundColor: `trasparent`, backgroundSize: "cover", backgroundPosition: "top" }} className={classes.cardContent}>
+            <Typography style={{ color: '#cffbfb' }} variant="h4" gutterBottom>
+              {item.title}
+            </Typography>
+            <Typography style={{ color: '#8fd0ca' }} variant="h5" >
+              {item.type}
+            </Typography>
+            <Typography style={{ color: '#e7fbfc' }} variant="h6" gutterBottom>
+              {item.price}$
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button onClick={() => history.push(`/details/${item.id}`)} size="small" >
+              View
+            </Button>
+            {user && user.email === 'isakov@gmail.com' ? <><Button onClick={() => history.push(`/editproduct/${item.id}`)} size="small" >
+              Edit
+            </Button>
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+
+                aria-haspopup="true"
+                onClick={() => deleteProduct(item.id)}
+              >
+                <DeleteIcon />
+              </IconButton></> : <></>}
+
             <IconButton
-              edge="end"
-              aria-label="account of current user"
-
-              aria-haspopup="true"
-              onClick={() => deleteProduct(item.id)}
+              color={checkItemInCart(item.id)}
+              aria-label="add to shopping"
+              onClick={() => addProductToCart(item)}
             >
-              <DeleteIcon />
-            </IconButton></> : <></>}
-
+              <AddShoppingCartIcon />
+            </IconButton>
+            <BookmarkBorderIcon
+              color={checkItemInFav(item.id)}
+              aria-label="add to shopping"
+              onClick={() => favProductToCart(item)}
+            />
+            <h5>{likes}</h5>
+            <FavoriteBorderIcon
+              color={isLiked(item)}
+              aria-label="add to shopping"
+              onClick={() => handleLikes(item.id, item)}
+            />
+          </CardActions>
           <IconButton
             color={checkItemInCart(item.id)}
             aria-label="add to shopping"
-            onClick={() => addProductToCart(item)}
+            color='warning'
+            onClick={() => history.push(`/comments/${item.id}`)}
+          // onClick={() => addProductToCart(item)}
           >
-            <AddShoppingCartIcon />
+            <CommentIcon />
           </IconButton>
-          <BookmarkBorderIcon
-            color={checkItemInFav(item.id)}
-            aria-label="add to shopping"
-            onClick={() => favProductToCart(item)}
-          />
-          <h5>{likes}</h5>
-          <FavoriteBorderIcon
-            color={isLiked(item)}
-            aria-label="add to shopping"
-            onClick={() => handleLikes(item.id, item)}
-          />
-        </CardActions>
-        <IconButton
-          color={checkItemInCart(item.id)}
-          aria-label="add to shopping"
-          color='warning'
-          onClick={() => history.push(`/comments/${item.id}`)}
-        // onClick={() => addProductToCart(item)}
-        >
-          <CommentIcon />
-        </IconButton>
-      </Card>
+        </Card>
+      </Flip >
     </Grid>
   );
 };
