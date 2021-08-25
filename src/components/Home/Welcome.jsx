@@ -4,6 +4,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Paper } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 
 
@@ -35,9 +36,11 @@ const Welcome = () => {
         <Grid container>
           <Grid item md={6}>
             <div className={classes.mainFeaturesPostContent}>
-              <Button href="/productlist" variant="contained" style={{ backgroundColor: 'white' }}>
-                Get started
-              </Button>
+              <Link to='/productlist'>
+                <Button variant="contained" style={{ backgroundColor: 'white' }}>
+                  Get started
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
